@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="th" style="background:#170b33">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ลอยบัวมหิดล 2569</title><meta name="description" content="ลอยบัวออนไลน์ เขียนคำอธิษฐาน แล้วปล่อยให้สายน้ำพาไป"><meta property="og:title" content="ลอยบัวมหิดล 2569"><meta property="og:description" content="มาลอยบัวด้วยกัน เขียนคำอธิษฐาน แล้วปล่อยให้สายน้ำพาไป">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Mali:wght@400;600&family=Noto+Serif+Thai:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--deep:#170b33;--lav:#cdb8f0;--pink:#f7b6d2;--pearl:#fff6ee;--gold:#e8c872;--gold2:#fbe9ae;--hand:'Mali','Sriracha',cursive;--serif:'Noto Serif Thai','Sarabun',serif;color-scheme:dark}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;margin:0;background:#170b33;color:var(--pearl);font:400 16px/1.9 var(--serif);overflow:hidden;overscroll-behavior:none;overflow-wrap:break-word;line-break:strict}
+.bg{position:fixed;inset:0;pointer-events:none}
+#sky{background:linear-gradient(#1b0e42 0,#2a1650 36%,#5a2f84 55%,#b3659d 62%)}
+#stars span{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff6dd;animation:tw2 4s ease-in-out infinite}
+@keyframes tw2{50%{opacity:.15}}
+#moon{position:fixed;top:8%;right:11%;width:62px;height:62px;border-radius:50%;background:radial-gradient(circle at 40% 38%,#fffbe8,#f5dd9a 72%);box-shadow:0 0 70px 24px rgba(251,233,174,.32);transition:transform .3s}
+#mtn{position:fixed;left:-10vw;width:120vw;top:calc(62% - 12vh);height:12vh}
+#water{top:62%;background:linear-gradient(#4b2879,#2a1650 45%,#170b33)}
+#water::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(transparent 0 13px,rgba(255,240,220,.06) 13px 14px);animation:flow 16s linear infinite}
+@keyframes flow{to{background-position:0 56px}}
+#refl{top:62%;right:calc(11% + 28px);width:6px;height:36%;background:repeating-linear-gradient(rgba(251,233,174,.55) 0 2px,transparent 2px 10px);-webkit-mask:linear-gradient(#000,transparent);mask:linear-gradient(#000,transparent);animation:shim 3s ease-in-out infinite alternate}
+@keyframes shim{to{transform:scaleX(2.4);opacity:.5}}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:60}
+.view{position:fixed;inset:0;display:none;padding:calc(16px + env(safe-area-inset-top,0px)) 20px 92px;overflow-y:auto;overflow-x:hidden;z-index:10;scrollbar-width:none}
+.view.on{display:block;animation:fi .9s ease both}
+#home.on,#make.on{display:flex;flex-direction:column}
+@keyframes fi{from{opacity:0}}
+h1,h2{font-family:'Chonburi',var(--hand);font-weight:400;margin:0;background:linear-gradient(#fff6ee,#e8c872);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.5}
+h1{font-size:clamp(38px,12vw,56px);text-align:center;text-shadow:none;filter:drop-shadow(0 0 14px rgba(232,200,114,.4))}
+h2{font-size:28px}
+h3{font:600 19px/1.6 var(--hand);color:var(--gold2);margin:0 0 4px}
+p{margin:0 0 14px}
+.btn{min-height:50px;padding:0 30px;border:1px solid var(--gold);background:linear-gradient(135deg,#8446c4,#d9689f);color:#fff;font:600 17px var(--hand);border-radius:30px 6px 30px 6px;box-shadow:0 0 22px rgba(232,200,114,.35),inset 0 0 12px rgba(255,255,255,.2);cursor:pointer;transition:transform .4s,box-shadow .4s}
+.btn:active{transform:scale(.96)}
+.btn.g{background:transparent;box-shadow:none;color:var(--gold2)}
+.btn:focus-visible,.chip:focus-visible,.nv:focus-visible,#snd:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+#home{align-items:center;justify-content:center;text-align:center;gap:6px}
+#hl{width:min(78vw,330px);animation:rise 5s ease-out both}
+@keyframes rise{from{opacity:0;filter:brightness(.25) blur(8px);transform:scale(.9) translateY(14px)}to{opacity:1}}
+#home .mot{font:400 20px/1.8 var(--hand);color:var(--pearl);animation:fi 3s 3.2s ease both;margin:4px 0 14px}
+#home .btn{animation:fi 3s 4s ease both}
+#hl svg,.lot svg{display:block;width:100%;height:auto;overflow:visible}
+#mkhead{display:flex;align-items:center;justify-content:space-between;gap:10px}
+#mkhead h2{font-size:22px}
+#dots{display:flex;gap:8px}
+#dots i{width:9px;height:15px;border-radius:50% 0 50% 0;background:rgba(205,184,240,.3);transform:rotate(-45deg);transition:.6s}
+#dots i.on{background:var(--gold2);box-shadow:0 0 10px var(--gold)}
+#stage{position:relative;height:36vh;min-height:210px;flex:none;display:flex;align-items:center;justify-content:center}
+#stage::after{content:'';position:absolute;left:6%;right:6%;bottom:2%;height:15%;border-radius:50%;background:radial-gradient(ellipse,rgba(251,233,174,.3),transparent 70%)}
+#stage svg{position:relative;z-index:1;height:100%;aspect-ratio:1;overflow:visible;touch-action:none}
+#panel{transition:opacity .8s}#panel.hid{opacity:0;pointer-events:none}
+.sw,.row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:6px 0 10px}
+.sw button{background:none;border:0;color:var(--lav);font:400 13px var(--hand);display:flex;flex-direction:column;align-items:center;gap:8px;min-width:58px;min-height:62px;cursor:pointer}
+.sw i{width:38px;height:38px;border-radius:50% 0 50% 0;transform:rotate(-45deg);background:linear-gradient(135deg,var(--a),var(--b));border:1px solid transparent;transition:.5s}
+.sw .on i{border-color:var(--gold2);box-shadow:0 0 16px var(--gold);transform:rotate(-45deg) scale(1.2)}
+.sw .on{color:var(--gold2)}
+.chip{min-height:44px;padding:0 18px;background:rgba(205,184,240,.1);border:1px solid rgba(232,200,114,.4);color:var(--pearl);font:400 15px var(--hand);border-radius:22px 4px 22px 4px;cursor:pointer}
+.chip.on{background:rgba(232,200,114,.22);border-color:var(--gold2);color:var(--gold2)}
+.chip.ex{text-align:left;min-height:44px;border-radius:4px 20px;font-size:14px;padding:6px 14px;line-height:1.6}
+.lbl{font:600 14px var(--hand);color:var(--lav);text-align:center;margin:8px 0 0}
+.stk button{width:50px;height:50px;padding:0}
+#wish{width:100%;min-height:104px;resize:none;border:0;padding:16px 18px;font:400 18px/1.8 var(--hand);color:#3b2260;background:linear-gradient(160deg,#fffaf0,#f1e3fa);clip-path:polygon(1% 4%,20% 0,45% 3%,70% 0,99% 3%,100% 40%,98% 70%,100% 97%,75% 100%,45% 97%,20% 100%,0 96%,2% 60%,0 30%)}
+#wish::placeholder{color:#8a72b0}
+.meta{display:flex;justify-content:space-between;font:400 13px var(--hand);color:var(--lav);margin:4px 4px 0}
+.err{color:var(--pink)}
+.nav2{display:flex;justify-content:space-between;gap:10px;margin-top:12px}
+.nav2 .btn{flex:1}
+.done{text-align:center}
+label.chip{display:inline-flex;align-items:center;justify-content:center;gap:10px;line-height:1.2}
+.ld{list-style:none;padding:0;margin:0 0 16px}.ld li{margin-bottom:13px}.ld div{display:flex;justify-content:space-between;gap:12px;font:400 15px/1.5 var(--hand)}.ld b{font-weight:600}.ld em{font-style:normal;color:var(--gold2);text-align:right}
+.ld i{display:block;height:7px;width:var(--w);border-radius:0 8px 8px 0;background:linear-gradient(90deg,#d9689f,#e8c872);margin-top:5px}.ld .hv i{background:linear-gradient(90deg,#8f84b3,#e6ddf5)}
+.wq{font:400 19px/1.8 var(--hand);text-align:center;margin:6px 0}.wn{text-align:center;font:400 14px var(--hand);color:var(--lav);margin:0 0 10px}
+.nm{width:100%;min-height:46px;margin-top:10px;border:0;border-bottom:1px solid var(--gold);background:transparent;color:var(--pearl);font:400 17px var(--hand);padding:0 4px;border-radius:0}.nm::placeholder{color:var(--lav)}
+.mean{text-align:center;font:400 15px/1.8 var(--hand);min-height:7.4em;margin:2px 0}.mean b{color:var(--gold2);font-size:17px}
+.lot.mine::after{content:'บัวของคุณ';position:absolute;left:50%;top:92%;transform:translateX(-50%);font:400 12px var(--hand);color:var(--gold2);text-shadow:0 0 8px #000;white-space:nowrap}
+#nav{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;justify-content:space-around;padding:14px 8px calc(6px + env(safe-area-inset-bottom,0px));background:linear-gradient(transparent,rgba(23,11,51,.94) 55%)}
+.nv{min-width:56px;min-height:52px;background:none;border:0;color:var(--lav);font:600 11px var(--hand);display:flex;flex-direction:column;align-items:center;gap:3px;opacity:.65;cursor:pointer;position:relative;transition:.5s}
+.nv svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.nv.on{color:var(--gold2);opacity:1}
+.nv.on::after{content:'';position:absolute;bottom:-3px;width:5px;height:5px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold)}
+#snd[aria-pressed=true]{color:var(--gold2);opacity:1}#snd[aria-pressed=true] .x{display:none}
+#garden{padding:0;overflow:hidden}
+#pool{position:absolute;inset:0;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;cursor:grab}
+#pool::-webkit-scrollbar{display:none}
+#field{position:relative;height:100%}
+.gh{position:fixed;top:calc(10px + env(safe-area-inset-top,0px));left:0;right:0;text-align:center;z-index:12;pointer-events:none}
+.gh h2{font-size:22px}.gh p{font:400 13px var(--hand);color:var(--lav);margin:0}
+.lot{position:absolute;transform:translate(-50%,-50%);cursor:pointer;animation:bob 6s ease-in-out infinite alternate}
+@keyframes bob{from{transform:translate(-50%,-50%) rotate(-2.2deg)}to{transform:translate(-50%,-46%) rotate(2.2deg)}}
+.lot svg{transition:transform .8s,filter .8s}
+.lot.lit svg{transform:scale(1.14);filter:drop-shadow(0 0 16px #fbe9ae) drop-shadow(0 0 30px #f7b6d2)}
+.lot.mine svg{filter:drop-shadow(0 0 8px rgba(251,233,174,.8))}
+#note{position:fixed;left:50%;bottom:96px;width:min(86vw,380px);z-index:30;transform:translate(-50%,24px);opacity:0;pointer-events:none;padding:30px 30px 26px;background:linear-gradient(160deg,rgba(255,250,240,.94),rgba(240,225,250,.9));color:#3b2260;clip-path:polygon(2% 3%,14% 0,32% 2%,54% 0,76% 3%,93% 0,100% 5%,98% 30%,100% 56%,97% 80%,100% 97%,80% 100%,55% 98%,30% 100%,9% 97%,0 100%,2% 70%,0 45%,3% 20%);transition:opacity .8s,transform .8s}
+#note.on{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+#note p{font:400 19px/1.85 var(--hand);margin:0 0 8px}#note small{font:400 13px var(--hand);color:#8a62b8}
+.rv{opacity:0;filter:blur(9px);transition:opacity 1.6s ease,filter 1.6s ease}.rv.in{opacity:1;filter:none}
+.story{max-width:560px;margin:0 auto}
+.story section{margin:0 0 54px}
+.story svg.mo{width:64px;height:44px;display:block;margin-bottom:6px;fill:none;stroke:var(--gold);stroke-width:1.3;stroke-linecap:round}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font:400 17px var(--hand)}dt{color:var(--gold2)}dd{margin:0}
+ul.w{list-style:none;padding:0;margin:0 0 18px}
+ul.w li{position:relative;padding-left:30px;margin-bottom:12px}
+ul.w li::before{content:'';position:absolute;left:4px;top:11px;width:12px;height:12px;border-radius:50% 0 50% 0;background:var(--gold);transform:rotate(-45deg);box-shadow:0 0 8px var(--gold)}
+.cmp{width:100%;height:auto;margin:6px 0 18px}
+.cmp text{font:400 14px var(--hand);fill:#cdb8f0;text-anchor:middle}
+.rip{position:fixed;z-index:50;border:1.5px solid var(--gold2);border-radius:50%;pointer-events:none;transform:translate(-50%,-50%)}
+#toast{position:fixed;left:50%;bottom:100px;transform:translateX(-50%);z-index:70;padding:8px 22px;background:rgba(42,22,80,.95);border:1px solid var(--gold);border-radius:20px 4px;font:400 14px var(--hand);opacity:0;transition:.5s;pointer-events:none}
+#toast.on{opacity:1}
+.tw{animation:tw 2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes tw{50%{opacity:.15;transform:scale(.45)}}
+.gl{animation:gl 5s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:center}
+@keyframes gl{to{opacity:.55;transform:scale(1.1)}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.rv{filter:none}}
+</style>
+</head>
+<body>
+<div class="bg" id="sky"></div><div class="bg" id="stars"></div><div id="moon"></div>
+<svg id="mtn" viewBox="0 0 800 120" preserveAspectRatio="none"><path d="M0 120V70C60 40 110 62 170 36S280 58 340 44 450 14 520 50 650 30 720 52 780 40 800 46V120Z" fill="#35195f"/><path d="M0 120V92C80 74 140 98 230 80S380 94 470 78 640 96 720 82 780 88 800 86V120Z" fill="#1e0f42"/><path d="M60 92l5-16 5 16zM150 90l6-20 6 20zM540 84l5-17 5 17zM610 88l6-19 6 19zM700 84l5-15 5 15z" fill="#1e0f42"/></svg>
+<div class="bg" id="water"></div><div class="bg" id="refl"></div>
+<canvas id="fx"></canvas>
+
+<main>
+<section class="view" id="home">
+  <div id="hl"></div>
+  <h1>ลอยบัวมหิดล</h1>
+  <p class="mot">ปล่อยความขุ่นเคือง ให้สายน้ำพาไป</p>
+  <button class="btn" data-go="make">เริ่มลอยบัว</button>
+</section>
+
+<section class="view" id="make">
+  <div id="mkhead"><h2 id="mkt"></h2><div id="dots"><i></i><i></i><i></i><i></i></div></div>
+  <div id="stage"></div>
+  <div id="panel"></div>
+</section>
+
+<section class="view" id="garden">
+  <div class="gh"><h2>สวนแห่งคำอธิษฐาน</h2><p>ปัดเพื่อเดินชมสระ แตะดอกบัวเพื่ออ่านคำอธิษฐาน</p><p id="gcnt"></p></div>
+  <div id="pool"><div id="field"></div></div>
+</section>
+
+<section class="view" id="story"><div class="story">
+  <h2 class="rv">เรื่องราวลอยบัวมหิดล</h2>
+  <section class="rv" style="margin-top:28px"><svg class="mo" viewBox="0 0 64 44"><path d="M4 30c8-6 14 6 22 0s14 6 22 0 10 4 12 2M32 4a10 10 0 1 0 8 14"/></svg>
+    <h3>ความเป็นมา</h3>
+    <p>มหาวิทยาลัยมหิดลจัดกิจกรรมในคืนวันเพ็ญขึ้น 15 ค่ำ เดือน 12 (วันลอยกระทง) เพื่อสืบสานวัฒนธรรมไทย ควบคู่กับการลดใช้วัสดุที่ส่งผลกระทบต่อสิ่งแวดล้อม</p></section>
+  <section class="rv"><svg class="mo" viewBox="0 0 64 44"><path d="M32 40C20 38 10 28 12 14 22 16 30 24 32 40ZM32 40C44 38 54 28 52 14 42 16 34 24 32 40ZM32 40C26 28 28 14 32 4 36 14 38 28 32 40Z"/></svg>
+    <h3>ความหมายของการลอยบัว</h3>
+    <p>เราลอยบัวเพื่อขอบคุณและขออภัยสายน้ำที่หล่อเลี้ยงชีวิตมาตลอดปี พร้อมปล่อยความโกรธ ความเสียใจ และความเหนื่อยล้า ให้ไหลไปกับน้ำ เหลือไว้เพียงใจที่เบาและความตั้งใจดี</p><p>งานนี้ใช้ดอกบัวหรือดอกบัวพับเป็นสัญลักษณ์ในการอธิษฐานขอพรและส่งความปรารถนาดีใต้แสงจันทร์ แทนการใช้กระทงขนาดใหญ่หรือวัสดุเหลือใช้จำนวนมาก</p></section>
+  <section class="rv"><svg class="mo" viewBox="0 0 64 44"><path d="M6 36h52M12 36c2-14 8-22 20-22s18 8 20 22"/></svg>
+    <h3>กระทงแต่ละแบบ อยู่ในน้ำนานแค่ไหน</h3>
+    <p>ทุกคืนลอยกระทง กระทงหลายแสนใบลงสู่แม่น้ำลำคลอง เฉพาะกรุงเทพฯ ปี 2565 เก็บกระทงได้ราว 5.7 แสนใบ ส่วนใหญ่ราวร้อยละ 96 ทำจากวัสดุธรรมชาติ แต่ที่เหลือบางส่วนเป็นโฟมที่ค้างอยู่ในน้ำนานมาก</p>
+    <ol class="ld">
+      <li><div><b>กระทงมันสำปะหลัง</b><em>ราว 30 นาที ถึง 1 ชั่วโมง</em></div><i style="--w:5%"></i></li>
+      <li><div><b>ขนมปัง โคนไอศกรีม</b><em>ราว 3 วัน</em></div><i style="--w:12%"></i></li>
+      <li><div><b>ต้นกล้วย ใบตอง กะลา</b><em>ราว 14 วัน</em></div><i style="--w:22%"></i></li>
+      <li><div><b>กระดาษ</b><em>ราว 2 ถึง 5 เดือน</em></div><i style="--w:48%"></i></li>
+      <li class="hv"><div><b>โฟม</b><em>ราว 50 ปีขึ้นไป บางแหล่งว่าถึง 500 ปี</em></div><i style="--w:100%"></i></li>
+    </ol>
+    <h3>ผลต่อสายน้ำ</h3>
+    <ul class="w"><li>โฟมไม่ย่อยสลายตามธรรมชาติ แตกเป็นเศษเล็กๆ ค้างอยู่ในน้ำและตะกอน สัตว์น้ำอาจกินเข้าไปโดยไม่รู้ตัว</li><li>กระทงขนมปังจำนวนมากในน้ำนิ่ง ทำให้สารอินทรีย์ในน้ำสูงขึ้น น้ำเน่าเสีย เคยเกิดที่สระน้ำสวนสันติภาพ กรุงเทพฯ จนปลาตายเป็นจำนวนมาก</li><li>วัสดุธรรมชาติก็เน่าได้ ถ้าลอยพร้อมกันเป็นจำนวนมากและไม่มีใครเก็บ</li></ul>
+    <h3>ลอยบัว ช่วยได้อย่างไร</h3>
+    <ul class="w"><li>ใช้ดอกบัวหรือบัวพับเพียงดอกเดียว ไม่ต้องมีฐานหรือวัสดุตกแต่งเพิ่ม ขยะจึงน้อยตั้งแต่ต้น</li><li>เป็นวัสดุจากธรรมชาติ ไม่มีโฟมหรือพลาสติกค้างอยู่ในน้ำ</li><li>ชิ้นเล็ก เก็บขึ้นง่าย ช่วยลดภาระการเก็บกวาดหลังงาน</li></ul>
+    <p style="font-size:13px;color:var(--lav)">ข้อมูลจาก ไทยพีบีเอส กรมอนามัย และสำนักสิ่งแวดล้อม กรุงเทพมหานคร ระยะเวลาย่อยสลายเป็นค่าประมาณ ขึ้นกับสภาพน้ำและขนาด ความยาวแถบเป็นภาพประกอบ ไม่ตรงสัดส่วนจริง</p></section>
+  <section class="rv" style="text-align:center"><button class="btn" data-go="make">ไปลอยบัว</button></section>
+</div></section>
+
+<section class="view" id="about"><div class="story">
+  <h2 class="rv">รักษ์สายน้ำ</h2>
+  <section class="rv" style="margin-top:24px"><h3>บัวที่ไม่ทิ้งรอยไว้</h3>
+    <svg class="cmp" viewBox="0 0 320 150"><path d="M0 112q20-8 40 0t40 0 40 0 40 0 40 0 40 0 40 0 40 0" fill="none" stroke="#cdb8f0" stroke-opacity=".5"/>
+      <path d="M38 62l12-14 52 4 10 16-4 34-58-4z" fill="#d9cfe9" stroke="#fff" stroke-opacity=".6"/><path d="M52 66l40 4M54 80l44 4M56 94l36 3" stroke="#a894c9" stroke-width="1"/><text x="76" y="134">โฟม ค้างอยู่ในน้ำ</text>
+      <g transform="translate(240 100)"><path d="M0 0C-14-6-22-24-18-40 -6-34 0-18 0 0ZM0 0C14-6 22-24 18-40 6-34 0-18 0 0ZM0 0C-8-14-6-34 0-48 6-34 8-14 0 0Z" fill="#f7b6d2" stroke="#fff" stroke-opacity=".5"/><path d="M-30 6h-10M30 6h12M-20 12h-14" stroke="#e8c872" stroke-dasharray="2 4" opacity=".7"/></g><text x="240" y="134">บัวธรรมชาติ สลายไปเอง</text></svg>
+    <p>งานนี้จัดพื้นที่ลอยโดยเฉพาะและกำหนดจุดคัดแยกขยะ เพื่อให้เก็บได้สะดวก และลดขยะที่อาจหลุดรอดลงสู่แหล่งน้ำของมหาวิทยาลัยและชุมชนโดยรอบ ดอกบัวและบัวพับจึงเบาต่อสายน้ำกว่ากระทงใหญ่</p></section>
+  <section class="rv"><h3>ร่วมกันรักษ์สายน้ำ</h3>
+    <ul class="w"><li>เลือกวัสดุจากธรรมชาติ และไม่ติดของที่ไม่ย่อยสลาย</li><li>ลอยบัวอย่างตั้งใจ ไม่ต้องลอยหลายดอก</li><li>ช่วยกันเก็บบัวหลังงาน และทิ้งขยะให้ถูกที่</li></ul></section>
+  <section class="rv"><h3>ไม่ระบุตัวตน</h3>
+    <p id="anon">บัวของคุณอยู่ในสระรวมให้ทุกคนเห็น เก็บไว้เฉพาะหน้าตาบัว คำอธิษฐาน และชื่อที่ใส่ (ถ้าใส่) เท่านั้น ไม่ต้องสมัครสมาชิก ไม่ผูกกับตัวตนของคุณ จึงไม่ควรใส่ข้อมูลส่วนตัวลงในคำอธิษฐาน ผู้จัดงานลบข้อความที่ไม่เหมาะสมออกได้</p>
+    </section>
+</div></section>
+</main>
+
+<div id="note" role="dialog" aria-live="polite"><p id="nt"></p><small id="ns"></small></div>
+<div id="toast"></div>
+<nav id="nav">
+  <button class="nv" data-go="make"><svg viewBox="0 0 24 24"><path d="M12 20C7 19 4 14 5 8c4 1 6 5 7 12ZM12 20c5-1 8-6 7-12-4 1-6 5-7 12ZM12 20C9 15 9 8 12 3c3 5 3 12 0 17Z"/></svg>ลอยบัว</button>
+  <button class="nv" data-go="garden"><svg viewBox="0 0 24 24"><path d="M3 17q3-3 6 0t6 0 6 0M8 12c-2-1-3-3-3-5 2 0 3 2 3 5ZM8 12c2-1 3-3 3-5-2 0-3 2-3 5ZM17 10c-1-1-1-3 0-4 1 1 1 3 0 4Z"/></svg>สวน</button>
+  <button class="nv" data-go="story"><svg viewBox="0 0 24 24"><path d="M16 4a8 8 0 1 0 4 12A7 7 0 0 1 16 4Z"/><path d="M5 5l.6 1.4L7 7l-1.4.6L5 9l-.6-1.4L3 7l1.4-.6z"/></svg>เรื่องราว</button>
+  <button class="nv" data-go="about"><svg viewBox="0 0 24 24"><path d="M12 3c4 4 6 7 6 10a6 6 0 0 1-12 0c0-3 2-6 6-10Z"/><path d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5"/></svg>เกี่ยวกับ</button>
+  <button class="nv" id="snd" aria-label="เปิดหรือปิดเสียงเพลง" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 6v12l-4.5-3.5H4z"/><path d="M15.5 9c1.4 1.7 1.4 4.3 0 6M18 6.5c2.8 3 2.8 8 0 11"/><path class="x" d="M16 9l5 6M21 9l-5 6"/></svg>เสียง</button>
+</nav>
+
+<script>
+onerror=(m,u,l)=>{document.body.insertAdjacentHTML('beforeend','<pre style="position:fixed;inset:0;z-index:99;margin:0;padding:20px;color:#fff;background:#170b33;white-space:pre-wrap;font:12px monospace">เกิดข้อผิดพลาด: '+m+' (บรรทัด '+l+')</pre>')};
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],sleep=t=>new Promise(r=>setTimeout(r,t));
+/* ===== ตั้งค่างาน: แก้ตรงนี้ ===== */
+
+/* ===== ดอกบัว SVG ===== */
+const COL={pink:['#fbc6dc','#d6579a','ชมพู','สื่อถึงความศรัทธา ความเลื่อมใส การตรัสรู้ ความเมตตา และความรักที่บริสุทธิ์ มักใช้เป็นตัวแทนขององค์สัมมาสัมพุทธเจ้าและการก้าวพ้นจากกิเลส'],purple:['#d2b4f7','#7a43c6','ม่วง','สื่อถึงสติปัญญา การรู้แจ้ง จิตวิญญาณ ความลึกลับ และการสำรวจจิตใจตนเอง รวมถึงเส้นทางสู่การตรัสรู้'],white:['#fffdf8','#d9c9ee','ขาว','สื่อถึงความบริสุทธิ์ จิตใจที่สงบ ผ่องใส ไม่มัวหมอง และความศรัทธา'],gold:['#fbe9ae','#d49a2e','ทอง','สื่อถึงปัญญาอันยิ่งใหญ่ ความปิติ ความสุข ความเจริญรุ่งเรือง และความศักดิ์สิทธิ์'],blue:['#c4c2fa','#6560c8','ฟ้าอมม่วง','ผสานความหมายของโทนฟ้าและม่วง สื่อถึงปัญญา ความรู้ ความจริง ความสงบทางจิตวิญญาณ และความสามารถในการก้าวข้ามกิเลสหรืออุปสรรค']};
+const STAR='M0-1Q.12-.12 1 0 .12.12 0 1-.12.12-1 0-.12-.12 0-1Z';
+const STK={leaf:'<path d="M-18 6C-12-14 8-16 18-8 14 10-6 16-18 6Z" fill="#8a73c9"/><path d="M-16 6Q0 0 16-7" stroke="#e6dcff" stroke-width="1" fill="none"/>',
+butterfly:'<path d="M0 0C-8-18-22-14-18-2-16 6-6 6 0 0ZM0 0C8-18 22-14 18-2 16 6 6 6 0 0Z" fill="#f4a6cf" stroke="#fbe9ae"/><path d="M0-3V8" stroke="#6a3a8e" stroke-width="2"/>',
+star:'<path d="M0-16Q2-2 16 0 2 2 0 16-2 2-16 0-2-2 0-16Z" fill="#fbe9ae"/>',
+fly:'<circle r="13" fill="#fbe9ae" opacity=".35"/><circle r="5" fill="#fff6c8"/>',
+ribbon:'<path d="M0 0C-6-12-20-10-16 0-14 8-4 6 0 0ZM0 0C6-12 20-10 16 0 14 8 4 6 0 0ZM-3 4L-8 16M3 4L8 16" fill="#e8c872" stroke="#b98a2a"/>',
+flower:[0,72,144,216,288].map(a=>`<circle cy="-7" r="5" fill="#f9c3dc" transform="rotate(${a})"/>`).join('')+'<circle r="3.5" fill="#e8c872"/>'};
+const SN={leaf:'ใบบัว',butterfly:'ผีเสื้อ',star:'ดาว',fly:'หิ่งห้อย',ribbon:'ริบบิ้นทอง',flower:'ดอกไม้เล็ก'};
+const mix=(h,w,t)=>{const a=[1,3,5].map(i=>parseInt(h.substr(i,2),16)),b=[1,3,5].map(i=>parseInt(w.substr(i,2),16));return'#'+a.map((v,i)=>Math.round(v+(b[i]-v)*t).toString(16).padStart(2,'0')).join('')};
+const gc=o=>o.cc?[mix(o.cc,'#ffffff',.55),o.cc,'สีของคุณ']:COL[o.c];
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let U=0;
+const rng=s=>()=>(s=(s*16807)%2147483647)/2147483647;
+function pt(L,W,r,rd){const j=(r()-.5)*8,l=L*(1+(r()-.5)*.14);
+return rd?`M0 0C${-W*1.2} ${-l*.25} ${-W*1.1} ${-l*.92} ${j} ${-l}C${W*1.1} ${-l*.92} ${W*1.2} ${-l*.25} 0 0Z`:`M0 0C${-W} ${-l*.3} ${-W*.8} ${-l*.75} ${j} ${-l}C${W*.8+j/2} ${-l*.75} ${W} ${-l*.3} 0 0Z`}
+function lotus(o,pad){const u=++U,c=gc(o),W=o.w||1,ni=o.ni||5,tc=o.tp==1?mix(c[0],'#ffffff',.7):o.tp==2?'#fbe9ae':c[0],r=rng(o.seed||o.c.length*97+o.outer*13+o.inner*7+3),gd=o.glow==2;
+let s=`<svg viewBox="-150 -150 300 300" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g${u}" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="${c[1]}"/><stop offset="1" stop-color="${tc}"/></linearGradient><radialGradient id="r${u}"><stop offset="0" stop-color="${gd?'#fbe9ae':c[0]}" stop-opacity="${gd?.75:.5}"/><stop offset="1" stop-color="${c[0]}" stop-opacity="0"/></radialGradient></defs>`;
+s+=`<circle class="gl" cx="0" cy="-5" r="${gd?150:125}" fill="url(#r${u})"/>`;
+if(o.glow==1)[[-95,-70,9],[100,-50,7],[-60,-118,6],[70,-108,10],[0,-138,7],[-122,0,6],[126,12,8]].forEach(([x,y,z],i)=>s+=`<g transform="translate(${x} ${y}) scale(${z})"><path class="tw" style="animation-delay:-${i*.5}s" d="${STAR}" fill="#fff6c8"/></g>`);
+if(pad)s+=`<ellipse cx="0" cy="64" rx="120" ry="26" fill="#4b2b7e" opacity=".9"/><ellipse cx="0" cy="62" rx="108" ry="21" fill="none" stroke="#a98ad6" stroke-opacity=".5"/><path d="M0 64L100 52" stroke="#2a1650" stroke-width="3" opacity=".6"/>`;
+s+='<g transform="translate(0 62)">';
+[[o.outer,104,38*W,.88,0,150],[o.outer-2,90,32*W,.95,1,112],[ni,68,26*W,1,2,70]].forEach(([n,len,w,op,i,sp])=>{for(let k=0;k<n;k++){const a=-sp/2+sp*k/(n-1)+(r()-.5)*6;
+s+=`<g transform="rotate(${a.toFixed(1)})" opacity="${op}"><path d="${pt(len,w,r,i==2?o.inner:0)}" fill="url(#g${u})" stroke="${i==2?'#fff':c[1]}" stroke-opacity=".5" stroke-width=".8"/><path d="M0-6Q${((r()-.5)*5).toFixed(1)} ${-len*.5} 0 ${-len*.8}" stroke="#fff" stroke-opacity=".4" fill="none" stroke-width=".7"/>${i==2?`<path d="${pt(len*.6,w*.5,r)}" fill="#fff" opacity=".28"/>`:''}</g>`}});
+s+='<g fill="'+(o.cen||'#fbe9ae')+'">'+[0,1,2,3,4,5,6].map(i=>`<circle cx="${Math.cos(i*.9)*7}" cy="${-30+Math.sin(i*.9)*5}" r="2.4"/>`).join('')+'</g></g>';
+(o.st||[]).forEach((t,i)=>{s+=`<g data-i="${i}" transform="translate(${t.x} ${t.y}) scale(${t.s})" style="cursor:grab">${STK[t.k]}${o.sel===i?'<circle r="22" fill="none" stroke="#fbe9ae" stroke-dasharray="3 3"/>':''}<circle r="24" fill="transparent"/></g>`});
+return s+'</svg>'}
+
+/* ===== ชั้นข้อมูล (ไม่มีหลังบ้าน เก็บในหน้านี้ชั่วคราวเท่านั้น) ===== */
+const EX=['ขอให้คุณแม่สุขภาพแข็งแรง ยิ้มได้ทุกวัน','ปล่อยความกังวลเรื่องสอบไปกับสายน้ำ ขอให้ใจสงบและทำเต็มที่','ขอบคุณสำหรับปีที่ผ่านมา ขอบคุณเพื่อนที่ไม่เคยทิ้งกัน','ขอโทษแม่น้ำ ขอโทษโลก ปีหน้าจะดูแลให้ดีกว่านี้','อยากให้ความเหนื่อยล้าทั้งหมดลอยหายไป พรุ่งนี้จะเริ่มใหม่','ขอให้เพื่อนร่วมห้องทุกคนเรียนจบพร้อมกันนะ','ขอให้น้องหมาที่บ้านมีความสุข และอยู่กับเรานานๆ','ปล่อยความเสียใจที่ยังค้างอยู่ ให้เป็นแค่ความทรงจำที่อ่อนโยน','ขอให้ได้กลับไปกินข้าวฝีมือยายอีกสักมื้อ','ขอให้ใจกล้าพอที่จะเริ่มสิ่งใหม่ๆ','ขอให้ทุกคนที่ฉันรักปลอดภัย อบอุ่น และไม่เหงา','โกรธเรื่องเก่าพอแล้ว วันนี้ขออนุญาตให้อภัยตัวเอง','ขอให้ฝันที่วาดไว้ค่อยๆ เป็นจริงทีละก้าว','ขอให้พ่อไม่ต้องทำงานหนักเกินไป พักบ้างนะ','ขอให้คืนนี้พระจันทร์สวย และทุกคนที่มองเห็นมีความสุข','ปล่อยความกลัวที่จะไม่เก่งพอ ฉันพอแล้วในแบบที่เป็น','ขอให้ได้ทำงานที่รัก และมีเวลาให้คนที่รักเสมอ','ขอบคุณอาจารย์ทุกท่านที่ใจดีและอดทนกับพวกเรา','ขอให้ใครสักคนที่กำลังเหนื่อย ได้รับกำลังใจในคืนนี้','ขอให้ปีหน้าเจอแต่เรื่องดีๆ และคนใจดีรอบตัว','ปล่อยคำพูดที่เคยทำร้ายใจ ให้ไหลไปไกลๆ','ขอให้สายน้ำสะอาด ให้ปลาและดอกบัวได้อยู่อย่างสบาย','ขอให้การเดินทางของเราทุกคนปลอดภัย แล้วได้กลับบ้านเสมอ','ขอให้เรากลับมายิ้มได้เหมือนเดิม ช้าๆ ก็ไม่เป็นไร','ขอให้ทุกความตั้งใจดีที่ลอยไปคืนนี้ ไปถึงใครสักคน'];
+const BAD=['ควย','เหี้ย','สัส','เย็ด','ระยำ','ไอ้สัตว์','อีดอก','พ่อมึง','แม่มึง','ส้นตีน','fuck','shit'];
+const bad=t=>BAD.some(w=>t.toLowerCase().includes(w));
+let BW=Math.max(innerWidth*3,25*96);
+/* ===== เชื่อมสระออนไลน์ (Supabase) — ดูขั้นตอนใน README-TH.md =====
+   ใส่ Project URL และ anon/publishable key ตรงนี้ ถ้าเว้นว่าง เว็บจะทำงานแบบออฟไลน์ (บัวอยู่แค่ในหน้านี้) */
+const CFG={url:'https://mnejgqmdtlvodbbmrzgm.supabase.co',key:'sb_publishable_jweW7q-Wqq5p5aZF89GHUg_mz6Uae5_'};
+const ONLINE=!!(CFG.url&&CFG.key),HD={apikey:CFG.key,'Content-Type':'application/json'},T=CFG.url+'/rest/v1/lotuses';
+if(/^eyJ/.test(CFG.key))HD.Authorization='Bearer '+CFG.key;
+const num=(v,a,b,d)=>{v=+v;return isFinite(v)?Math.min(b,Math.max(a,v)):d},hex=(v,d)=>/^#[0-9a-fA-F]{6}$/.test(v)?v:d;
+function fromRow(r){const t=x=>x||{};return{id:r.id,sid:100+r.id,c:COL[r.color]?r.color:'pink',cc:hex(r.custom_color,''),outer:num(r.n_out,5,11,7),inner:num(r.round_in,0,1,0),ni:num(r.n_in,3,7,5),w:num(r.wid,.5,1.5,1),tp:num(r.tip,0,2,0),cen:hex(r.stamen,'#fbe9ae'),glow:num(r.glow,0,2,1),st:(Array.isArray(r.stickers)?r.stickers:[]).slice(0,12).map(q=>({k:STK[t(q).k]?q.k:'star',x:num(t(q).x,-140,140,0),y:num(t(q).y,-140,140,0),s:num(t(q).s,.5,3,1)})),wish:String(r.wish||'').slice(0,120),name:String(r.name||'').slice(0,30),seed:r.id%99991+1,mine:Store.mine.has(r.id)}}
+const Store={mem:[],mine:new Set(),
+ async list(){let rem=[];if(ONLINE){try{const ac=new AbortController(),tm=setTimeout(()=>ac.abort(),8000);const r=await fetch(T+'?select=*&hidden=eq.false&order=id.desc&limit=400',{headers:HD,signal:ac.signal});clearTimeout(tm);if(r.ok)rem=(await r.json()).map(fromRow)}catch(e){}}
+  return [...(rem.length<60?this.mem.filter(o=>o.sample):[]),...this.mem.filter(o=>!o.sample),...rem]},
+ async add(o){if(!ONLINE){this.mem.push(o);return true}
+  try{const r=await fetch(T,{method:'POST',headers:{...HD,Prefer:'return=representation'},body:JSON.stringify({color:o.c,custom_color:o.cc||null,n_out:o.outer,round_in:o.inner,n_in:o.ni,wid:o.w,tip:o.tp,stamen:o.cen,glow:o.glow,stickers:o.st,wish:o.wish,name:o.name||null})});
+   if(!r.ok)throw 0;const row=(await r.json())[0];this.mine.add(row.id);o.id=row.id;return true}catch(e){o.sid=1000+this.mem.length;this.mem.push(o);return false}}};
+(()=>{const r=rng(77),ks=Object.keys(STK),cs=Object.keys(COL);EX.forEach((w,i)=>{const st=[];for(let k=r()*3|0;k>0;k--)st.push({k:ks[r()*6|0],x:(r()-.5)*150,y:-90+r()*110,s:.8+r()*.5});
+Store.mem.push({c:cs[r()*5|0],outer:[5,7,9][r()*3|0],inner:r()*2|0,glow:r()*3|0,w:[.8,1,1.25][r()*3|0],ni:[3,5,7][r()*3|0],tp:r()*3|0,st,wish:w,seed:i+11,sample:1,sid:i,x:(i+.5)/25*BW+(r()-.5)*40,y:[.66,.74,.82,.9][(i*3)%4]+(r()-.5)*.03})})})();
+
+/* ===== เสียง (Web Audio สร้างเอง) ===== */
+let AC,sOn=false,nz,mt,mg,stp=0,nxt=0;
+const PS=[0,2,4,7,9],fq=d=>261.63*Math.pow(2,PS[((d%5)+5)%5]/12+Math.floor(d/5));
+const MEL=[2,null,2,3,4,null,3,2,1,null,2,1,0,null,1,null,2,null,2,3,4,5,4,3,2,1,0,1,2,null,null,null];
+function ranat(f,t,v){[[f,1],[f*2.76,.25]].forEach(([q,a])=>{const o=AC.createOscillator(),g=AC.createGain();o.type='triangle';o.frequency.value=q;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v*a,t+.005);g.gain.exponentialRampToValueAtTime(.0001,t+.45);o.connect(g);g.connect(mg);o.start(t);o.stop(t+.5)})}
+function ching(t,open){[3200,4870].forEach(q=>{const o=AC.createOscillator(),g=AC.createGain();o.frequency.value=q;g.gain.setValueAtTime(.03,t);g.gain.exponentialRampToValueAtTime(.0001,t+(open?.28:.07));o.connect(g);g.connect(mg);o.start(t);o.stop(t+.3)})}
+function drum(t,s){const o=AC.createOscillator(),g=AC.createGain();o.frequency.setValueAtTime(s?150:200,t);o.frequency.exponentialRampToValueAtTime(70,t+.12);g.gain.setValueAtTime(s?.22:.12,t);g.gain.exponentialRampToValueAtTime(.0001,t+.18);o.connect(g);g.connect(mg);o.start(t);o.stop(t+.2)}
+function tick(){while(nxt<AC.currentTime+.4){const i=stp%32,m=MEL[i];if(m!=null)ranat(fq(m+5),nxt,.11);if(i%2==1)ching(nxt,i%4==3);if(i%4==0)drum(nxt,i%8==0);stp++;nxt+=.21}}
+function sound(t){sOn=t;$('#snd').setAttribute('aria-pressed',t);if(!AC){AC=new (window.AudioContext||window.webkitAudioContext)();mg=AC.createGain();mg.gain.value=.55;mg.connect(AC.destination)}
+if(t){AC.resume();stp=0;nxt=AC.currentTime+.1;mt=setInterval(tick,100);const b=AC.createBuffer(1,AC.sampleRate*2,AC.sampleRate),d=b.getChannelData(0);let l=0;for(let i=0;i<d.length;i++){l=(l+.02*(Math.random()*2-1))/1.02;d[i]=l*3.5}
+nz=AC.createBufferSource();nz.buffer=b;nz.loop=true;const f=AC.createBiquadFilter();f.type='lowpass';f.frequency.value=650;const g=AC.createGain();g.gain.value=.06;nz.connect(f);f.connect(g);g.connect(mg);nz.start()}else{clearInterval(mt);if(nz)nz.stop()}}
+function chime(){if(!sOn)return;const t=AC.currentTime;[523,784,1047,1568].forEach((f,i)=>{const o=AC.createOscillator(),g=AC.createGain();o.frequency.value=f*(i?1.002:1);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.12/(i+1),t+.02);g.gain.exponentialRampToValueAtTime(.0001,t+3.5);o.connect(g);g.connect(mg);o.start(t);o.stop(t+3.6)})}
+$('#snd').onclick=()=>sound(!sOn);
+
+/* ===== หิ่งห้อย กลีบร่วง ประกายทอง ===== */
+const FX=(()=>{const cv=$('#fx'),x=cv.getContext('2d'),RM=matchMedia('(prefers-reduced-motion:reduce)').matches;let w,h,d,F=[],P=[],S=[],raf,lt=0;
+const pet=i=>({x:Math.random()*w,y:i?Math.random()*h:-20,v:.25+Math.random()*.4,dx:(Math.random()-.5)*.3,r:Math.random()*6.28,vr:(Math.random()-.5)*.02,ph:Math.random()*6.28,s:7+Math.random()*7,c:['255,190,220','255,246,238','214,184,246'][Math.random()*3|0]});
+function size(){w=innerWidth;h=innerHeight;d=Math.min(devicePixelRatio||1,2);cv.width=w*d;cv.height=h*d;x.setTransform(d,0,0,d,0,0);
+F=Array.from({length:RM?6:Math.round(Math.min(26,w/16))},()=>({x:Math.random()*w,y:h*(.3+Math.random()*.65),a:Math.random()*6.28,p:Math.random()*6.28,r:1.6+Math.random()*1.6}));
+P=Array.from({length:RM?0:Math.round(Math.min(14,w/30))},()=>pet(1))}
+function burst(px,py,n){if(!isFinite(px+py))return;for(let i=0;i<n;i++){const a=Math.random()*6.28,v=.4+Math.random()*2.2;S.push({x:px,y:py,vx:Math.cos(a)*v,vy:Math.sin(a)*v-.4,l:1,s:1.5+Math.random()*2.4,g:Math.random()<.8})}}
+function glow(px,py,r,rgb,a){const g=x.createRadialGradient(px,py,0,px,py,r);g.addColorStop(0,`rgba(${rgb},${a})`);g.addColorStop(1,`rgba(${rgb},0)`);x.fillStyle=g;x.fillRect(px-r,py-r,r*2,r*2)}
+function frame(t){raf=requestAnimationFrame(frame);x.clearRect(0,0,w,h);
+P.forEach(p=>{if(!RM){p.y+=p.v;p.x+=p.dx+Math.sin(p.ph)*.3;p.r+=p.vr;p.ph+=.02;if(p.y>h+20)Object.assign(p,pet(0))}
+x.save();x.translate(p.x,p.y);x.rotate(p.r);x.scale(1,Math.cos(p.ph));const s=p.s;x.beginPath();x.moveTo(0,-s);x.bezierCurveTo(s*.8,-s*.4,s*.6,s*.5,0,s);x.bezierCurveTo(-s*.6,s*.5,-s*.8,-s*.4,0,-s);x.fillStyle=`rgba(${p.c},.7)`;x.fill();x.restore()});
+x.globalCompositeOperation='lighter';
+F.forEach(f=>{if(!RM){f.a+=(Math.random()-.5)*.14;f.x+=Math.cos(f.a)*.35;f.y+=Math.sin(f.a)*.3;f.p+=.03;if(f.x<-20)f.x=w+10;if(f.x>w+20)f.x=-10;if(f.y<h*.25)f.y=h*.25;if(f.y>h+10)f.y=h*.5}
+glow(f.x,f.y,f.r*7,'255,236,160',.15+.5*Math.pow(Math.sin(f.p)*.5+.5,2))});
+S=S.filter(s=>{s.x+=s.vx;s.y+=s.vy;s.vy+=.02;s.vx*=.985;s.l-=.013;if(s.l<=0)return false;glow(s.x,s.y,s.s*4,s.g?'255,226,140':'255,205,235',s.l*.9);return true});
+x.globalCompositeOperation='source-over'}
+size();addEventListener('resize',size);frame();
+document.addEventListener('visibilitychange',()=>{cancelAnimationFrame(raf);if(!document.hidden)frame()});
+let lm=0;addEventListener('pointerdown',e=>burst(e.clientX,e.clientY,RM?5:14),{passive:true});
+addEventListener('pointermove',e=>{if((e.buttons||e.pointerType=='touch')&&Date.now()-lm>40){lm=Date.now();burst(e.clientX,e.clientY,2)}},{passive:true});
+return{burst}})();
+
+/* ===== ดาวและพารัลแลกซ์ ===== */
+{const r=rng(5);$('#stars').innerHTML=Array.from({length:70},()=>`<span style="left:${r()*100}%;top:${r()*52}%;animation-delay:-${r()*4}s;opacity:${.4+r()*.6}"></span>`).join('')}
+
+/* ===== นำทาง ===== */
+const VW=['home','make','garden','story','about'];let gDirty=1,focusId=null;
+function go(v){if(!VW.includes(v))v='home';$$('.view').forEach(e=>e.classList.toggle('on',e.id==v));$$('.nv').forEach(b=>b.classList.toggle('on',b.dataset.go==v));
+$('#note').classList.remove('on');if(v=='garden')garden();try{if(location.hash.slice(1)!=v)location.hash=v}catch(_){}
+$$('#'+v+' .rv').forEach((e,i)=>setTimeout(()=>io.observe(e),50))}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.2});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b)go(b.dataset.go)});
+addEventListener('hashchange',()=>go(location.hash.slice(1)));
+$('#hl').innerHTML=lotus({c:'pink',outer:9,inner:1,glow:2,st:[],seed:21},true);
+$$('.view').forEach(v=>v.addEventListener('scroll',()=>{$('#moon').style.transform=`translateY(${-v.scrollTop*.06}px)`},{passive:true}));
+
+/* ===== ลอยบัวออนไลน์ ===== */
+const S0=()=>({c:'pink',outer:7,inner:0,glow:1,st:[],sel:-1,wish:'',step:0,tab:0,rel:false,ex:[0,1,2,3].map(()=>EX[Math.random()*25|0]),err:'',w:1,ni:5,tp:0,cen:'#fbe9ae',cc:'',name:''});
+let S=S0();const TT=['เลือกสีบัว','ตกแต่งดอกบัว','เขียนคำอธิษฐาน','ปล่อยบัว'];
+const mean=()=>S.cc?'<b>สีที่คุณเลือก</b> สีของความตั้งใจที่เป็นของคุณเอง':`<b>${COL[S.c][2]}</b> ${COL[S.c][3]}`;
+const chip=(a,v,t,on)=>`<button class="chip${on?' on':''}" data-a="${a}" data-v="${v}">${t}</button>`;
+const draw=()=>{$('#stage').innerHTML=lotus(S,false)};
+function panel(){const p=$('#panel');let h='';
+if(S.step==0)h=`<div class="sw">${Object.entries(COL).map(([k,v])=>`<button data-a="c" data-v="${k}" class="${S.c==k&&!S.cc?'on':''}" style="--a:${v[0]};--b:${v[1]}" aria-label="${v[2]}"><i></i>${v[2]}</button>`).join('')}</div><p class="mean" id="mean">${mean()}</p><div class="row"><label class="chip">เลือกสีเอง <input type="color" id="cc" value="${S.cc||'#c06ab0'}" style="vertical-align:middle;width:30px;height:26px;border:0;background:none;padding:0"></label></div>`;
+if(S.step==1){h=`<div class="row">${['ทรงกลีบ','สีสัน','สติกเกอร์','แสง'].map((t,i)=>chip('tab',i,t,S.tab==i)).join('')}</div>`;
+if(S.tab==0)h+=`<p class="lbl">กลีบชั้นนอก</p><div class="row">${[5,7,9,11].map(n=>chip('outer',n,n,S.outer==n)).join('')}</div><p class="lbl">กลีบชั้นใน</p><div class="row">${[3,5,7].map(n=>chip('ni',n,n,S.ni==n)).join('')}${chip('inner',0,'ปลายแหลม',!S.inner)+chip('inner',1,'ปลายมน',S.inner)}</div><p class="lbl">รูปร่างกลีบ</p><div class="row">${[['เรียว',.8],['พอดี',1],['ป้อม',1.25]].map(([t,v])=>chip('w',v,t,S.w==v)).join('')}</div>`;
+if(S.tab==1)h+=`<p class="lbl">ปลายกลีบ</p><div class="row">${['เหมือนสีบัว','ขาวนวล','ทองอ่อน'].map((t,i)=>chip('tp',i,t,S.tp==i)).join('')}</div><p class="lbl">เกสรกลางดอก</p><div class="row">${[['ทอง','#fbe9ae'],['ชมพู','#f7b6d2'],['ขาว','#ffffff']].map(([t,v])=>chip('cen',v,t,S.cen==v)).join('')}</div>`;
+if(S.tab==2){h+=`<p class="lbl">แตะเพื่อวาง แล้วลากบนดอกบัวเพื่อย้าย</p><div class="row stk">${Object.keys(STK).map(k=>`<button class="chip" data-a="add" data-v="${k}" aria-label="${SN[k]}"><svg viewBox="-20 -20 40 40" width="32" height="32">${STK[k]}</svg></button>`).join('')}</div>`;
+if(S.sel>=0)h+=`<div class="row">${chip('sz',.8,'เล็กลง')+chip('sz',1.25,'ใหญ่ขึ้น')+chip('del',0,'เอาออก')}</div>`}
+if(S.tab==3)h+=`<div class="row">${['นุ่มนวล','วิบวับ','เรืองทอง'].map((t,i)=>chip('glow',i,t,S.glow==i)).join('')}</div>`}
+if(S.step==2)h=`<textarea id="wish" maxlength="120" placeholder="เขียนสิ่งที่อยากปล่อยวาง หรือสิ่งที่อยากขอ…" aria-label="คำอธิษฐาน">${esc(S.wish)}</textarea><div class="meta"><span class="err" id="er">${S.err}</span><span id="cn">${S.wish.length}/120</span></div><input class="nm" id="nm" maxlength="30" placeholder="ชื่อหรือนามแฝง (ไม่ใส่ก็ได้)" value="${esc(S.name)}" aria-label="ชื่อ ไม่บังคับ">${ONLINE?'<p class="lbl" style="font-size:12px;margin-top:6px">บัวและคำอธิษฐานจะอยู่ในสระรวมให้ทุกคนเห็น อย่าใส่ข้อมูลส่วนตัวนะ</p>':''}<p class="lbl">หรือแตะเลือกตัวอย่าง</p><div class="row" style="flex-direction:column;align-items:stretch">${S.ex.map((t,i)=>`<button class="chip ex" data-a="ex" data-v="${i}">${t}</button>`).join('')}</div>`;
+if(S.step==3)h=`<div class="done"><p class="wq">“${esc(S.wish)}”</p>${S.name?`<p class="wn">— ${esc(S.name)}</p>`:''}<p style="color:var(--lav);font-size:14px">หายใจเข้าลึกๆ แล้วปล่อยวางไปพร้อมสายน้ำ</p><button class="btn" data-a="rel">ปล่อยบัว</button></div>`;
+if(S.step<3)h+=`<div class="nav2">${S.step?`<button class="btn g" data-a="back">ย้อนกลับ</button>`:''}<button class="btn" data-a="next">ถัดไป</button></div>`;
+else if(!S.rel)h+=`<div class="nav2"><button class="btn g" data-a="back">ย้อนกลับ</button></div>`;
+p.innerHTML=h;$('#mkt').textContent=TT[S.step];$$('#dots i').forEach((d,i)=>d.classList.toggle('on',i<=S.step))}
+function all(){draw();panel()}
+$('#panel').addEventListener('click',e=>{const b=e.target.closest('[data-a]');if(!b)return;const a=b.dataset.a,v=b.dataset.v;
+if(a=='c'){S.c=v;S.cc='';all()}else if(a=='tab'){S.tab=+v;S.sel=-1;all()}else if(a=='outer'){S.outer=+v;all()}else if(a=='inner'){S.inner=+v;all()}else if(a=='glow'){S.glow=+v;all()}else if(a=='ni'){S.ni=+v;all()}else if(a=='w'){S.w=+v;all()}else if(a=='tp'){S.tp=+v;all()}else if(a=='cen'){S.cen=v;all()}
+else if(a=='add'){if(S.st.length<12){S.st.push({k:v,x:(Math.random()-.5)*110,y:-70+Math.random()*80,s:1});S.sel=S.st.length-1;all()}else toast('ใส่สติกเกอร์ได้ไม่เกิน 12 ชิ้น')}
+else if(a=='sz'){const t=S.st[S.sel];t.s=Math.max(.5,Math.min(3,t.s*v));all()}else if(a=='del'){S.st.splice(S.sel,1);S.sel=-1;all()}
+else if(a=='ex'){S.wish=S.ex[v];panel()}
+else if(a=='back'){S.step--;S.sel=-1;all()}
+else if(a=='next'){if(S.step==2){const t=S.wish.trim();if(!t)S.err='เขียนคำอธิษฐานก่อนนะ';else if(bad(t)||bad(S.name))S.err='ขอใช้ถ้อยคำสุภาพนะ';else S.err='';if(S.err){$('#er').textContent=S.err;return}S.wish=t}S.step++;S.sel=-1;all()}
+else if(a=='rel')release();else if(a=='save')save();else if(a=='share')share();else if(a=='new'){const c=S.c;S=S0();S.c=c;all()}else if(a=='gg')go('garden')});
+$('#panel').addEventListener('input',e=>{const i=e.target.id;if(i=='wish'){S.wish=e.target.value;$('#cn').textContent=S.wish.length+'/120'}else if(i=='nm')S.name=e.target.value;else if(i=='cc'){S.cc=e.target.value;draw();$('#mean').innerHTML=mean()}});
+let dg=null;const stg=$('#stage');
+stg.addEventListener('pointerdown',e=>{const g=e.target.closest('[data-i]');if(!g||S.step!=1||S.tab!=2)return;e.preventDefault();const i=+g.dataset.i;if(S.sel!=i){S.sel=i;draw();panel()}const svg=stg.querySelector('svg');svg.setPointerCapture(e.pointerId);dg={i,svg,g:svg.querySelector(`[data-i="${i}"]`)}});
+stg.addEventListener('pointermove',e=>{if(!dg)return;const p=dg.svg.createSVGPoint();p.x=e.clientX;p.y=e.clientY;const q=p.matrixTransform(dg.svg.getScreenCTM().inverse()),t=S.st[dg.i];t.x=Math.max(-140,Math.min(140,q.x));t.y=Math.max(-140,Math.min(140,q.y));dg.g.setAttribute('transform',`translate(${t.x} ${t.y}) scale(${t.s})`)});
+stg.addEventListener('pointerup',()=>{dg=null});
+
+let lastPost=0;
+async function release(){if(ONLINE&&Date.now()-lastPost<20000){toast('รอสักครู่ก่อนลอยดอกต่อไปนะ');return}S.rel=true;const pn=$('#panel'),q=`<p class="wq">“${esc(S.wish)}”</p>${S.name?`<p class="wn">— ${esc(S.name)}</p>`:''}`;pn.innerHTML=`<div class="done">${q}<p class="wn">กำลังลอยไปตามสายน้ำ…</p></div>`;
+const el=stg.firstElementChild,r=stg.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height*.84;chime();
+await el.animate([{transform:'none'},{transform:'translateY(12%) scale(.55)'}],{duration:1400,easing:'cubic-bezier(.3,.7,.3,1)',fill:'forwards'}).finished;
+FX.burst(cx,cy,46);[0,350,700].forEach(d=>setTimeout(()=>{const z=document.createElement('div');z.className='rip';z.style.cssText=`left:${cx}px;top:${cy}px;width:60px;height:18px`;document.body.appendChild(z);z.animate([{transform:'translate(-50%,-50%) scale(.3)',opacity:.9},{transform:'translate(-50%,-50%) scale(6)',opacity:0}],{duration:3200,easing:'ease-out'}).onfinish=()=>z.remove()},d));
+await sleep(1300);
+const an=el.animate([{transform:'translateY(12%) scale(.55)'},{transform:'translate(14%,-6%) scale(.36)'}],{duration:4600,easing:'ease-in-out',fill:'forwards'});
+const tm=setInterval(()=>{const b=el.getBoundingClientRect();FX.burst(b.left+b.width/2,b.top+b.height*.75,3)},150);await an.finished;clearInterval(tm);
+const o={c:S.c,cc:S.cc,outer:S.outer,inner:S.inner,ni:S.ni,w:S.w,tp:S.tp,cen:S.cen,glow:S.glow,st:S.st.map(t=>({...t})),wish:S.wish,name:S.name.trim(),seed:Date.now()%99991+1,mine:1,id:Date.now(),x:(.25+Math.random()*.5)*BW,y:.7+Math.random()*.16};
+const ok=await Store.add(o);lastPost=Date.now();focusId=o.id;gDirty=1;S.step=4;
+pn.innerHTML=`<div class="done">${q}<h2 style="font-size:24px;margin-top:6px">บัวของคุณลอยไปแล้ว</h2>${ok?'':'<p class="wn err">ส่งขึ้นสระรวมไม่สำเร็จ แต่ยังเห็นบัวของคุณในหน้านี้</p>'}<div class="row"><button class="btn" data-a="gg">ดูบัวของฉันในสระ</button></div><div class="row">${DL?'<button class="btn g" data-a="save">บันทึกภาพ</button>':''}<button class="btn g" data-a="share">แชร์</button><button class="btn g" data-a="new">ลอยดอกใหม่</button></div></div>`}
+
+/* ===== บันทึก/แชร์ ===== */
+let DL=null;(async()=>{try{DL=window.claude?await claude.use('downloads'):{save:async({filename:f,data:d})=>{const a=document.createElement('a');a.href=URL.createObjectURL(d);a.download=f;document.body.appendChild(a);a.click();a.remove()}}}catch(e){}})();
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('on'),2600)}
+async function png(){const svg=lotus({...S,sel:-1},false).replace('<svg ','<svg width="700" height="700" '),im=new Image();im.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);await im.decode();
+const c=document.createElement('canvas');c.width=1080;c.height=1350;const x=c.getContext('2d');let g=x.createLinearGradient(0,0,0,1350);g.addColorStop(0,'#1b0e42');g.addColorStop(.55,'#5a2f84');g.addColorStop(.6,'#b3659d');g.addColorStop(.62,'#3a1d66');g.addColorStop(1,'#170b33');x.fillStyle=g;x.fillRect(0,0,1080,1350);
+const r=rng(9);x.fillStyle='#fff6dd';for(let i=0;i<80;i++){x.globalAlpha=.3+r()*.7;x.fillRect(r()*1080,r()*760,2,2)}x.globalAlpha=1;
+g=x.createRadialGradient(900,150,0,900,150,90);g.addColorStop(0,'#fffbe8');g.addColorStop(.4,'#f5dd9a');g.addColorStop(1,'rgba(245,221,154,0)');x.fillStyle=g;x.fillRect(780,30,240,240);
+const cl=gc(S)[1];g=x.createRadialGradient(540,520,0,540,520,480);g.addColorStop(0,cl+'77');g.addColorStop(1,cl+'00');x.fillStyle=g;x.fillRect(0,0,1080,1100);x.drawImage(im,190,170,700,700);x.textAlign='center';x.fillStyle='#fff6ee';x.font="600 46px Mali,'Noto Serif Thai',sans-serif";
+const seg=Intl.Segmenter?[...new Intl.Segmenter('th',{granularity:'word'}).segment(S.wish)].map(s=>s.segment):[...S.wish];let L=[],ln='';seg.forEach(w=>{if(x.measureText(ln+w).width>860){L.push(ln);ln=w.trimStart()}else ln+=w});L.push(ln);
+L.forEach((t,i)=>x.fillText(t,540,990+i*70));if(S.name){x.fillStyle='#fbe9ae';x.font="34px Mali,'Noto Serif Thai',sans-serif";x.fillText('— '+S.name,540,1010+L.length*70)}x.fillStyle='#e8c872';x.fillStyle='#e8c872';x.font="38px Chonburi,Mali,sans-serif";x.fillText('ลอยบัวมหิดล 2569',540,1290);
+return new Promise(res=>c.toBlob(res,'image/jpeg',.92))}
+async function save(){try{const dl=DL;if(!dl){toast('เบราว์เซอร์นี้ยังบันทึกภาพไม่ได้');return}await dl.save({filename:'my-lotus.jpg',data:await png()})}catch(e){if(!e||e.code!='declined')toast('บันทึกภาพไม่สำเร็จ ลองอีกครั้งนะ')}}
+function share(){const d={title:'ลอยบัวมหิดล',text:'มาลอยบัวด้วยกัน',url:location.href};if(navigator.share)navigator.share(d).catch(()=>{});else if(navigator.clipboard)navigator.clipboard.writeText(d.url).then(()=>toast('คัดลอกลิงก์แล้ว')).catch(()=>toast('คัดลอกไม่สำเร็จ'));else toast('คัดลอกลิงก์จากแถบที่อยู่ได้เลย')}
+
+/* ===== สวนแห่งคำอธิษฐาน ===== */
+let G=[],lf=0;
+async function garden(){const pool=$('#pool'),f=$('#field');
+if(gDirty||(ONLINE&&Date.now()-lf>20000)){gDirty=0;lf=Date.now();G=await Store.list();const W=BW=Math.max(innerWidth*3,Math.ceil(G.length/25)*25*96);f.style.width=W+'px';
+f.innerHTML=G.map((o,i)=>{const k=o.sid,y=[.66,.74,.82,.9][(k*3)%4]+((k*37)%11-5)*.004;o.px=((k*.6180339887)%1)*(W-160)+80;return`<div class="lot${o.mine?' mine':''}" data-n="${i}" style="left:${o.px}px;top:${y*100}%;width:${64+(y-.64)/.26*70}px;z-index:${y*100|0};animation-delay:-${(k*1.37)%6}s">${lotus(o,true)}</div>`}).join('');
+$('#gcnt').textContent='มีบัว '+G.length+' ดอกลอยอยู่ในสระ'}
+if(focusId){const i=G.findIndex(o=>o.id==focusId);focusId=null;if(i>=0){pool.scrollLeft=G[i].px-innerWidth/2;setTimeout(()=>f.children[i]&&f.children[i].click(),700)}}}
+$('#field').addEventListener('click',e=>{if(moved)return;const l=e.target.closest('.lot');$$('.lot.lit').forEach(x=>x.classList.remove('lit'));if(!l){$('#note').classList.remove('on');return}
+const o=G[l.dataset.n];l.classList.add('lit');$('#nt').textContent=o.wish;$('#ns').textContent=o.name?'— '+o.name:(o.mine?'บัวของคุณ':(o.sample&&ONLINE?'คำอธิษฐานตัวอย่าง':'ผู้ไม่ประสงค์ออกนาม'));$('#note').classList.add('on');{const b=l.getBoundingClientRect();FX.burst(e.clientX||b.left+b.width/2,e.clientY||b.top+b.height/2,18)}});
+let moved=0;(()=>{const p=$('#pool');let d=0,sx,sl;p.addEventListener('pointerdown',e=>{if(e.pointerType!='mouse')return;d=1;moved=0;sx=e.clientX;sl=p.scrollLeft});
+addEventListener('pointermove',e=>{if(d){if(Math.abs(e.clientX-sx)>4)moved=1;p.scrollLeft=sl-(e.clientX-sx)}});addEventListener('pointerup',()=>{d=0;setTimeout(()=>moved=0)});
+p.addEventListener('scroll',()=>{$('#mtn').style.transform=`translateX(${-p.scrollLeft*.04}px)`},{passive:true})})();
+
+all();go(location.hash.slice(1)||'home');
+</script>
+</body>
+</html>
